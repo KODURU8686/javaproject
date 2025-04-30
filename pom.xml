@@ -19,7 +19,7 @@
     </properties>
     <properties>
     <sonar.java.binaries>target/classes</sonar.java.binaries>
-</properties>
+    </properties>
 
     <dependencies>
         <dependency>
