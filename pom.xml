@@ -17,6 +17,7 @@
     
     <properties>
     <sonar.java.binaries>target/classes</sonar.java.binaries>
+    <java.version>17</java.version>
     </properties>
 
     <dependencies>
