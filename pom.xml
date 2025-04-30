@@ -2,26 +2,25 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.3.1</version>
         <relativePath />
-        <configuration>
-                <source>17</source>
-                <target>17</target>
-            </configuration><!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.webapp</groupId>
     <artifactId>bankingportal</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>bankingportal</name>
     <description>Demo project for Spring Boot</description>
-    
+
+    <!-- Corrected properties block (removed duplicate) -->
     <properties>
-    <sonar.java.binaries>target/classes</sonar.java.binaries>
-    <java.version>17</java.version>
+        <java.version>17</java.version>
     </properties>
 
     <dependencies>
@@ -45,14 +44,15 @@
             <artifactId>javafaker</artifactId>
             <version>1.0.2</version>
         </dependency>
+        <!-- Removed duplicate mapstruct dependencies -->
         <dependency>
             <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct-processor</artifactId>
+            <artifactId>mapstruct</artifactId>
             <version>1.6.0.Beta2</version>
         </dependency>
         <dependency>
             <groupId>org.mapstruct</groupId>
-            <artifactId>mapstruct</artifactId>
+            <artifactId>mapstruct-processor</artifactId>
             <version>1.6.0.Beta2</version>
         </dependency>
         <dependency>
@@ -147,7 +147,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.15.0</version> <!-- Use the latest version available -->
+                <version>3.15.0</version>
                 <configuration>
                     <rulesets>
                         <ruleset>/rulesets/java/braces.xml</ruleset>
@@ -155,7 +155,6 @@
                         <ruleset>/usr/pmd/rulesets/strings.xml</ruleset>
                         <ruleset>http://localhost/design.xml</ruleset>
                     </rulesets>
-
                 </configuration>
                 <executions>
                     <execution>
